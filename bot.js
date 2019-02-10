@@ -67,6 +67,7 @@ const getAndSave = (url, name) => {
 
 // Play for a user if they now enter the voice channels.
 // Play only if someone has already asked entrybot to save their YT video.
+// *JM* this could move into streambot for user status change maybe to do online autoposts?
 client.on('voiceStateUpdate', async (old, nextChannel) => {
   let newUserChannel = nextChannel.voiceChannel
   let oldUserChannel = old.voiceChannel
